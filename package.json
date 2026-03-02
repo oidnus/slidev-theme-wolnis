@@ -1,5 +1,5 @@
 {
-  "name": "slidev-theme-ds",
+  "name": "slidev-theme-wolnis",
   "version": "1.0.0",
   "type": "module",
   "description": "Slidev theme by Damian Ślimak for IT training and conference presentations",
@@ -40,12 +40,12 @@
     }
   },
   "author": "Damian Ślimak <oidnus@gmail.com>",
-  "homepage": "https://github.com/oidnus/slidev-theme-ds",
+  "homepage": "https://github.com/oidnus/slidev-theme-wolnis",
   "repository": {
     "type": "git",
-    "url": "https://github.com/oidnus/slidev-theme-ds.git"
+    "url": "https://github.com/oidnus/slidev-theme-wolnis.git"
   },
-  "bugs": "https://github.com/oidnus/slidev-theme-ds/issues",
+  "bugs": "https://github.com/oidnus/slidev-theme-wolnis/issues",
   "scripts": {
     "build": "slidev build example.md",
     "dev": "slidev example.md --open",

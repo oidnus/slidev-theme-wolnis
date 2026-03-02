@@ -1,75 +1,66 @@
 ---
 theme: ./
 lineNumbers: true
-
-addons:
-  - slidev-component-poll
-  - slidev-addon-sync
-  - slidev-addon-announcement
-  
-#syncSettings:
-#  server: http://127.0.0.1:8080
-syncStates:
-  poll:
-    presenter: false
-    init: false
-  pollUsers:
-    presenter: true
-  # Add the following lines if you want to also sync slidev channels
-  shared: [ "page", "clicks", "cursor", "lastUpdate" ]
-  drawings: false
+showSlideNumber: true
+highlighter: shiki
+title: "Slidev Theme Wolniś (Demo)"
+info: |
+  ## Slidev Theme Wolniś
+  Demo presentation showcasing all available layouts, components, and features.
+fonts:
+  sans: 'Inter Variable'
+  custom: 'Outfit Variable'
 ---
 
-# Slidev Theme — DS
+# Cover
 
-## Autor [Damian Ślimak](https://damianslimak.pl)
+## Author [John Doe](https://example.com)
 
-&nbsp; <small class="text-sm">Motyw Slidev do prezentacji szkoleniowych i konferencyjnych.</small>
-
+<small class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small>
 
 ---
 layout: about-me
 
-helloMsg: O Mnie
-name: Damian Ślimak
+helloMsg: Your Presenter
+name: John Doe
 position: left
-school: "Wykładowca na Uniwersytecie"
-company: "Twórca nawigator.ai"
-website: "damianslimak.pl"
-website2: "nawigator.ai"
-email: "info@damianslimak.pl"
-imageSrc: /theme/assets/damian.jpg
+school: "University Lecturer"
+company: "Acme Corp"
+website: "example.com"
+website2: "example.org"
+email: "john@example.com"
+imageSrc: /assets/user.png
 ---
 
 
 ---
-layout: cover
+layout: quote
+author: John Doe
 ---
 
-# Cover title
-
-## Level 2 on Cover
-
-Paragraph on the cover.
-
-
----
-layout: section
----
-
-# Section title with Subheading
-
-## Subheading if needed
-
-Short content
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu.
 
 ---
 layout: center
 ---
 
-# Center title  AaHhJjGgMmYy
+# Center
 
-Subtitle for the center layout
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+
+---
+layout: image-right
+image: /assets/example.png
+---
+
+# Image Right
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vehicula lobortis arcu.
+
+- Pellentesque rutrum mattis
+- **Phasellus mattis** libero
+- Nam pulvinar varius egestas
 
 
 ---
@@ -82,13 +73,25 @@ layout: two-cols
 
 ## Left
 
-This shows on the left 1/2
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras suscipit mattis lectus at sagittis. 
 
 ::right::
 
-## Right
+Donec imperdiet elementum metus, et efficitur erat. Aenean volutpat nisl eget ante congue.
 
-This shows on the right 1/2
+
+---
+layout: image-left
+image: /assets/example.png
+---
+
+# Image Left
+
+Morbi mattis elementum magna at consectetur. Aenean iaculis est a orci volutpat varius. Nam pulvinar varius egestas, non pulvinar sapien.
+
+- Fusce pulvinar elementum
+- Vivamus dictum lectus
+- Nullam in dui mauris
 
 
 ---
@@ -99,23 +102,42 @@ layout: two-cols-2-1
 
 ::left::
 
-
 ## Left
 
-This shows on the left 2/3
+Aliquam erat volutpat. Pellentesque rutrum mattis efficitur. Mauris tristique enim non tortor pellentesque, ac lacinia nunc tincidunt.
 
 ::right::
 
 ## Right
 
-This shows on the right 1/3
+Donec pretium egestas tincidunt. Nam non mi mauris.
+
+
+---
+layout: timeline
+---
+
+::header::
+# Timeline
+
+::step1::
+## 1. Vestibulum
+Morbi mattis elementum magna at consectetur. Aenean iaculis est a orci volutpat varius.
+
+::step2::
+## 2. Integer 
+Maecenas in ipsum in sem finibus eleifend. Mauris tristique enim non tortor pellentesque.
+
+::step3::
+## 3. Vivamus
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
 
 ---
 layout: grid
 ---
 
-# 4 Section Grid
+# Grid
 
 ::tr::
 
@@ -149,30 +171,29 @@ layout: grid
 ::bl::
 ```
 
-Here is some dummy content.
-
-It is interesting to see how it reforms the page.
-
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque id ligula magna.
 
 
 ---
+layout: default
+---
 
-# Code with Highlighting
+# Default
 
-The code highlighting is powered by Shiki
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 
 ```ts {1-6|8-12|all}
-interface User {
+interface Element {
     id: number
-    firstName: string
-    lastName: string
-    role: string
+    title: string
+    description: string
+    active: boolean
 }
 
-function updateUser(id: number, update: Partial<User>) {
-    const user = getUser(id)
-    const newUser = {...user, ...update}
-    saveUser(id, newUser)
+function processElement(id: number, update: Partial<Element>) {
+    const el = getElement(id)
+    const newEl = {...el, ...update}
+    saveElement(id, newEl)
 }
 ```
 
@@ -180,48 +201,48 @@ function updateUser(id: number, update: Partial<User>) {
 layout: default
 ---
 
-# Announcements
+# Default
 
-A small component to add an announcement to a page.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 <Announcement type="default" title="Default Note" inline>
-    Just something to think about
+    Lorem ipsum dolor sit amet
 </Announcement>
 
 <Announcement type="idea" title="Idea" inline>
-    Propose an idea
+    Consectetur adipiscing elit
 </Announcement>
 
 <Announcement type="brainstorm" title="Brainstorm" inline>
-    We need ideas
+    Nullam in dui mauris
 </Announcement>
 
 <Announcement type="error" title="Error" inline>
-    Danger or probable BOO-BOO
+    Vivamus hendrerit arcu
 </Announcement>
 
 <Announcement type="warning" inline>
-    When errors MAY happen
+    Pellentesque rutrum mattis
 </Announcement>
 
 <Announcement type="info" inline>
-    Sidebar information
+    Nam pulvinar varius
 </Announcement>
 
 <Announcement type="duration" title="Duration" inline>
-    How long it takes
+    Donec pretium egestas
 </Announcement>
 
 <Announcement type="important" title="Important">
-Bring attention to an item
+Morbi mattis elementum magna
 </Announcement>
 
 <Announcement type="priority" compact width=full>
-Do this first
+Aliquam erat volutpat
 </Announcement>
 
 <Announcement type="info" title="Heads up">
-    Custom icon via slot
+    Lorem ipsum dolor sit
     <template #icon>
         <i class="i-fa7-solid-user-ninja h-5 w-5 mt-0.5"></i>
     </template>
@@ -229,31 +250,39 @@ Do this first
 
 
 ---
+layout: two-cols-2-1
+---
 
-# Table
+::left::
+# Two Columns 2:1
 
-| Title         | Description                          | Default       |
+| Lorem         | Ipsum                                | Default       |
 |---------------|--------------------------------------|---------------|
-| `layout`      | The layout to use for the slide      | `default`     |
-| `theme`       | The theme to use for the slide       | `the-unnamed` |
-| `highlighter` | The highlighter to use for the slide | `shiki`       |
-| `background`  | The background to use for the slide  | `none`        |
+| `layout`      | Suspendisse potenti nullam           | `default`     |
+| `theme`       | Vivamus dictum lectus massa          | `the-unnamed` |
+| `highlighter` | Pellentesque rutrum mattis libero    | `shiki`       |
+| `background`  | Aliquam erat volutpat dolor          | `none`        |
 
-## Content underneath
+::right::
+## Right
 
-Some content to place here
-
----
-
-# Todo
-
-- [ ] Add a todo list
-- [ ] Add a todo list
-- [x] Add a todo list
+Mauris tristique enim non tortor pellentesque, ac lacinia nunc tincidunt.
 
 ---
+layout: default
+---
 
-# Heading 1
+# Default
+
+- [x] Lorem ipsum dolor
+- [ ] Consectetur adipiscing 
+- [x] Suspendisse potenti
+
+---
+layout: default
+---
+
+# Default
 
 ## Heading 2
 
@@ -263,68 +292,179 @@ Some content to place here
 
 ##### Heading 5
 
-Text within this page
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-> **Info**: This is a note
-
----
-
-# Poll Component
-
-<Poll
-displayResults="quiz"
-question="What is your favorite color ?"
-:answers="['Red', 'Green', 'Blue']"
-/>
-
-Smile-SA/slidev-component-poll: Poll component for Slidev. (2025).
-GitHub. https://github.com/Smile-SA/slidev-component-poll?tab=readme-ov-file
-
-Smile-SA/slidev-addon-sync. (2025). GitHub. https://github.com/Smile-SA/slidev-addon-sync
+> **Info**: Vestibulum ante ipsum
 
 ---
+layout: fact
+fact: "0 KB"
+label: "lorem ipsum dolor sit amet"
+---
 
-# What is Slidev?
+# Fact
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula justo.
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+---
+layout: comparison
+---
+
+# Comparison
+
+::left::
+
+- Lorem ipsum dolor sit amet
+- Consectetur adipiscing elit
+- Suspendisse potenti nullam
+- Phasellus mattis libero
+
+::right::
+
+- Mauris tristique enim non tortor
+- Aenean iaculis est a orci 
+- Vestibulum ante ipsum primis
+- Donec pretium egestas tincidunt
+
+---
+layout: image-full
+image: /assets/example.png
+caption: CONSECTETUR ADIPISCING
+---
+
+# Image Full
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+
+
+---
+layout: theory-code
+---
+
+::left::
+# Theory Code
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- Pellentesque rutrum mattis
+- Phasellus mattis libero
+- Nam pulvinar varius egestas
+
+::right::
+```bash
+npm create astro@latest
+npm install
+npm run dev
+
+# Nullam in dui mauris
+npx astro build
+```
+
+---
+layout: default
+---
+
+# Window Mockup
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+<div class="mt-8 flex justify-center">
+  <Window title="Terminal — lorem ipsum" type="terminal">
+    <div class="px-6 py-4 font-mono text-sm leading-6 w-[600px]">
+      <div class="text-green-500">▶ lorem ipsum dolor</div>
+      <div class="text-zinc-400">09:12:45 [build] 24 pages built in 1.45s</div>
+      <div class="text-zinc-400">09:12:45 [build] Complete!</div>
+      <div class="text-brand-primary mt-2">Check the dist/ folder for output.</div>
+    </div>
+  </Window>
+</div>
+
+---
+layout: default
+---
+
+# Mermaid Diagram
+
+<div class="transform scale-[1.60] origin-top mt-12 w-full flex justify-center">
+
+```mermaid
+graph LR
+A[Lorem Ipsum] --> B{Dolor Sit}
+A --> M{Amet Consectetur}
+A --> O{Adipiscing Elit}
+
+B --> C(Sed Do Eiusmod)
+M --> C
+O --> C
+
+C -->|Result| D[Lorem Ipsum]
+```
+
+</div>
+
+---
+layout: two-cols
+---
+
+# QR Code Example
+
+::left::
+
+- Lorem ipsum dolor sit amet.
+- Consectetur adipiscing elit.
+- Sed do eiusmod tempor incididunt.
+- Ut labore et dolore magna aliqua.
+
+::right::
+
+<div class="flex justify-center items-center h-full w-full pt-4">
+  <div class="bg-white p-4 rounded-3xl shadow-[0_0_40px_rgba(124,58,237,0.5)] border-4 border-brand-primary w-full max-w-[500px] flex items-center justify-center">
+    <QRCode value="https://example.com" :size="450" />
+  </div>
+</div>
+
+---
+layout: default
+---
+
+# Badges & Math
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+- <Badge type="success">Success</Badge> Lorem ipsum dolor sit amet.
+- <Badge type="error">Alert</Badge> Consectetur adipiscing elit.
+- <Badge type="warning">Warning</Badge> Sed do eiusmod tempor incididunt.
 
 <br>
-<br>
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+### Formula (KaTeX):
 
+$TTI < 500ms$ & $JS = 0KB$:
+
+$$
+Efficiency = \frac{Content}{TotalWeight} \times 100\%
+$$
 
 ---
+layout: takeaways
+---
 
-# Navigation
+# Takeaways
 
-Hover on the bottom-left corner to see the navigation's controls panel
+::list::
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- Suspendisse potenti nullam, phassellus mattis libero.
+- Nam pulvinar varius egestas, mauris tristique enim.
 
-### Keyboard Shortcuts
-
-|                                                      |                             |
-|------------------------------------------------------|-----------------------------|
-| <kbd>space</kbd> / <kbd>tab</kbd> / <kbd>right</kbd> | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd>  | previous animation or slide |
-| <kbd>up</kbd>                                        | previous slide              |
-| <kbd>down</kbd>                                      | next slide                  |
 
 ---
 layout: center
 class: "text-center"
 ---
 
-# Learn More
+# Center 
 
-[Documentations](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
+[Lorem ipsum](https://sli.dev) / [Dolor sit amet](https://github.com/slidevjs/slidev)
 
 
 ---
@@ -333,6 +473,7 @@ transition: fade-out
 level: 2
 ---
 
-# Laisser les bon temps rouler <fa7-solid-brain />
+# End <fa7-solid-brain />
 
-The end... for now
+Lorem ipsum dolor sit amet.
+

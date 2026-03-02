@@ -3,7 +3,7 @@
 ## [1.0.0] - 2026-03-02
 
 - Fork of [slidev-theme-nmt](https://github.com/AdyGCode/slidev-theme-nmt) by Adrian Gould
-- Renamed to `slidev-theme-ds`
+- Renamed to `slidev-theme-wolnis`
 - Updated author, metadata, and documentation
 - Added new layouts: `fact`, `quote`, `comparison`, `image-full`, `theory-code`, `timeline`, `takeaways`
 - Added custom components: `Window`, `Badge`, `QRCode`

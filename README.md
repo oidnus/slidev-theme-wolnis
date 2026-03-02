@@ -1,4 +1,4 @@
-# Slidev Theme — DS
+# Slidev Theme — Wolniś
 
 A dark [Slidev](https://sli.dev/) theme for IT training and conference presentations by [Damian Ślimak](https://damianslimak.pl).
 
@@ -10,7 +10,7 @@ Add the following front-matter to your `slides.md`:
 
 ```yaml
 ---
-theme: gh:oidnus/slidev-theme-ds
+theme: gh:oidnus/slidev-theme-wolnis
 ---
 ```
 
