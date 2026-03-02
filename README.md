@@ -57,15 +57,15 @@ layout: cover
 ---
 layout: about-me
 
-helloMsg: O Mnie
-name: Damian Ślimak
+helloMsg: Your Presenter
+name: John Doe
 position: left
-school: "Wykładowca na Uniwersytecie"
-company: "Twórca nawigator.ai"
-website: "damianslimak.pl"
-website2: "nawigator.ai"
-email: "info@damianslimak.pl"
-imageSrc: /theme/assets/damian.jpg
+school: "University Lecturer"
+company: "Acme Corp"
+website: "example.com"
+website2: "example.org"
+email: "john@example.com"
+imageSrc: /assets/user.png
 ---
 ```
 
@@ -140,6 +140,17 @@ Used in the form:
     </template>
 </Announcement>
 ```
+
+## Author
+
+**Damian Ślimak** — IT trainer, university lecturer, and creator of [nawigator.ai](https://nawigator.ai)
+
+- 🌐 [damianslimak.pl](https://damianslimak.pl)
+- 🧭 [nawigator.ai](https://nawigator.ai)
+- 💼 [LinkedIn](https://www.linkedin.com/in/damian-slimak/)
+- 🎥 [YouTube](https://www.youtube.com/@nawigatorai)
+- 🐙 [GitHub](https://github.com/oidnus)
+- ✉️ info@damianslimak.pl
 
 ## Credits
 
