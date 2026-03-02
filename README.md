@@ -10,7 +10,7 @@ Add the following front-matter to your `slides.md`:
 
 ```yaml
 ---
-theme: gh:damianslimak/slidev-theme-ds
+theme: gh:oidnus/slidev-theme-ds
 ---
 ```
 

@@ -40,12 +40,12 @@
     }
   },
   "author": "Damian Ślimak <oidnus@gmail.com>",
-  "homepage": "https://github.com/damianslimak/slidev-theme-ds",
+  "homepage": "https://github.com/oidnus/slidev-theme-ds",
   "repository": {
     "type": "git",
-    "url": "https://github.com/damianslimak/slidev-theme-ds.git"
+    "url": "https://github.com/oidnus/slidev-theme-ds.git"
   },
-  "bugs": "https://github.com/damianslimak/slidev-theme-ds/issues",
+  "bugs": "https://github.com/oidnus/slidev-theme-ds/issues",
   "scripts": {
     "build": "slidev build example.md",
     "dev": "slidev example.md --open",
